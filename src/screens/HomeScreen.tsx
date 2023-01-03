@@ -1,5 +1,6 @@
 import { StyleSheet, View, Text, Pressable, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { HomeScreenNavigationProp } from '../navigation/types';
 
 const DATA = [
   {
@@ -30,7 +31,7 @@ const DATA = [
 ];
 
 const HomeScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<HomeScreenNavigationProp>();
 
   const renderListItems = ({ item }) => {
     return (
